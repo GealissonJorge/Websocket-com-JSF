@@ -6,8 +6,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
-      xmlns:p="http://primefaces.org/ui" >
-      
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Message board</title>
     </h:head>
@@ -21,9 +20,10 @@
             </f:websocket>
             <hr/>
             <h3>Mensagens Enviadas</h3>        
-            <ui:repeat value="#{websocketBean.messages}" var="msg">
+            <ui:repeat value="#{websocketBean.messages}" var="msg" >
                 <h:outputText style="margin-left: 200px" value="#{msg}" /><br></br>
             </ui:repeat>
+            <p:separator />
             <ui:repeat value="#{websocketBean.respostas}" var="resp">
                 <h:outputText value="#{resp}" /><br></br>
             </ui:repeat>           
