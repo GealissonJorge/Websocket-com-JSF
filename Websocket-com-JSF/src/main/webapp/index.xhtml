@@ -5,7 +5,6 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Painel de Mensagem</title>
@@ -16,7 +15,7 @@
             <h:inputText value="#{websocketBean.enteredMessage}"/>
             <h:commandButton value="Send" action="#{websocketBean.onSendMessage}" onclick="#{websocketBean.bot(websocketBean.enteredMessage)}"/>
             <f:websocket channel="incoming" onmessage="#{websocketBean.consoleM()}" >
-               <f:ajax event="new­message" render="@form"/>
+               <f:ajax event="new-­message" render="@form"/>
             </f:websocket>
             <hr/>
             <h3>Mensagens Enviadas</h3>        
