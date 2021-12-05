@@ -72,7 +72,7 @@ private static final Logger LOG = Logger.getLogger(WebsocketBean.class.getName()
    }
    public void bot(String enteredMessage){
        if(enteredMessage.equals("Oi")){
-           resposta="Olá";
+           setResposta("Olá");
            websocketservice.addResposta(resposta);
        }
        if(enteredMessage.equals("Como vai?")){
